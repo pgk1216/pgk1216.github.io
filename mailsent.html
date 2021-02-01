@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Success!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="mail-sent">
+            <h1>Mail Sent Successfully!</h1>
+            <div class="spacer"></div>
+            <p>I usually reply within one week. If you want to get in touch with me quicker, email me at <span class="accented">philipgk@umich.edu</span>!</p>
+            <div class="spacer"></div>
+            <p>Redirecting you in <span class="redirect-countdown">5</span> seconds...</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    var counter = 4;
+
+    var countDown = setInterval(function() {
+        document.querySelector(".redirect-countdown").innerHTML = counter;
+        counter--;
+
+        if(counter == 0) {
+            window.location.href = "https://philipgkim.com/"
+            clearInterval(countDown);
+        }
+    }, 1000);
+</script>
+
+</html>
